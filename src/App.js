@@ -35,10 +35,19 @@ const App = () => {
   
     const handleSubmit = () => {
       // Checking if all inputs are valid
-      if (emailError || passwordError || confirmPasswordError) {
+      /*if (emailError || passwordError || confirmPasswordError) {
         alert("Can't submit the form. Please check the errors.");
       } else {
         alert('Form submitted successfully!');
+      }*/
+      if (!email.trim() || !password.trim() || !confirmPassword.trim()) {
+        alert('All fields must be filled out. Please enter your details.');
+      } 
+      else if (email && password && confirmPassword) {
+        alert('Form submitted successfully');
+      } 
+      else {
+        alert('Can’t submit the form. Please check the input fields.');
       }
     };
     return (
